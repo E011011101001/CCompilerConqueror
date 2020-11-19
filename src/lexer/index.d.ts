@@ -19,7 +19,8 @@ export type TokenType =
   'RBrace'
 
 // Number means Line-no
-export type LexArray = Array<[Token, TokenType, Number]>
+export type LexItem = [Token, TokenType, Number]
+export type LexArray = Array<LexItem>
 
 export interface Lexer {
   (srcCode: string): LexArray
